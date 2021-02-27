@@ -59,6 +59,9 @@ app.post('/send', (req, res) => {
   }
 });
 
-app.listen(7891, () => {
-  console.log('CORS-enabled server listening on port 7891');
+const PORT = process.env.PORT || 7891;
+
+app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Started on ${PORT}`);
 });
