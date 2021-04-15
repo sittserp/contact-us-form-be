@@ -42,7 +42,7 @@ app.post('/send', (req, res) => {
       if(err) {
         res.status(500).send({
           success: false,
-          message: 'Something went wrong. Try again later'
+          message: `Something went wrong. Try again later ${err} info ${info}`
         });
       } else {
         res.send({
