@@ -23,7 +23,7 @@ app.get('/ping', (req, res) => {
 app.post('/send', (req, res) => {
   try {
     const mailOptions = {
-      form: req.body.email,
+      from: req.body.email,
       to: process.env.email,
       subject: req.body.subject,
       html: `
